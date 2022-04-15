@@ -23,6 +23,7 @@
     'data': [
         'views/res_partner_views.xml',
         'views/crm_lead_views.xml',
+        'views/webclient_templates.xml',
     ],
     'installable': True,
     'application': False,

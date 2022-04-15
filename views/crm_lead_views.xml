@@ -20,7 +20,7 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//h2/div/label[@for='expected_revenue']/parent::div/parent::h2" position="attributes">
+                <xpath expr="//label[@for='expected_revenue']/parent::div/parent::h2" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <field name="team_id" position="attributes">
@@ -32,6 +32,16 @@
                 <field name="priority" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
+                <!-- Move all group to one column -->
+                <xpath expr="//sheet/group/group[@name='lead_partner']/parent::group" position="before">
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                    <xpath expr="//sheet/group/group" position="move"/>
+                </xpath>
                 <page name="lead" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </page>

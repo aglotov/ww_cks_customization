@@ -1,0 +1,13 @@
+.o_form_view {
+    &.o_form_editable .o_address_format {
+        .o_address_city {
+            width: 49%;
+        }
+        div.o_address_state {
+            width: 49%;
+        }
+    }
+    .o_address_format .o_address_state {
+        margin-right: 0%;
+    }
+}

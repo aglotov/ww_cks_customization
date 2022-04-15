@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="quick_create_opportunity_form" model="ir.ui.view">
+            <field name="name">crm.lead.form.quick_create.inherit.ww_cks_customization</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+            <field name="arch" type="xml">
+                <label for="expected_revenue" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </label>
+                <xpath expr="//field[@name='expected_revenue']/parent::div[last()]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="crm_lead_view_form" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit.ww_cks_customization</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h2/div/label[@for='expected_revenue']/parent::div/parent::h2" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="team_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="date_deadline" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="priority" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <page name="lead" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</odoo>
